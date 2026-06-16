@@ -28,3 +28,16 @@ def plot_dist_speed(drivers,names):
     plt.title(f"Distance vs Speed of {len(drivers)} Drivers")
     plt.legend()
     plt.show()
+
+def plot_dist_brake(drivers,names):
+    plt.figure(figsize=(8,6))
+    for i,dr in enumerate(drivers):
+        x = dr["Distance"]
+        y = dr["Brake"] * 100
+
+        plt.plot(x,y,label=names[i])
+    plt.xlabel("Distance")
+    plt.ylabel("Bake")
+    plt.title(f"Distance vs Brake of {len(drivers)} Drivers")
+    plt.legend()
+    plt.show()
