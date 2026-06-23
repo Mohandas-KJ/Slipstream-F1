@@ -72,3 +72,18 @@ def plot_dist_ngear(drivers,names):
     plt.title(f"Distance vs nGear of {len(drivers)} Drivers")
     plt.legend()
     plt.show()
+
+# Plot RPM of drivers given the distance for a single lap (fastest lap)
+# Can Measure Engine Powers
+def plot_dist_rpms(drivers,names):
+    plt.figure(figsize=(8,6))
+    for i,dr in enumerate(drivers):
+        x = dr["Distance"]
+        y = dr["RPM"]
+
+        plt.plot(x,y,label=names[i])
+    plt.xlabel("Distance")
+    plt.ylabel("RPM")
+    plt.title(f"Distance vs RPM of {len(drivers)} Drivers")
+    plt.legend()
+    plt.show()
