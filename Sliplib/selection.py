@@ -13,3 +13,7 @@ def pick_tyre_data(lap_data):
     tyre_columns = ["Driver","LapNumber","Compound","TyreLife","FreshTyre","Stint"]
 
     return lap_data[tyre_columns]
+
+# Function to give Crisp Result
+def clean_result(data):
+    return data[["Abbreviation","TeamName","Position"]]
