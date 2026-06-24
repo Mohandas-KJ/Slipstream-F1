@@ -32,3 +32,18 @@ This Report uses 2025 data to analyse the perfomance of 2026 GP
 - Kimi Antonelli Best Performer this year (2026) scored P9 in 2025
 - Verstappen Scored P7
 
+### Qualifying Lap Analysis
+#### Fastest Lap
+
+| Name      | Value    |
+|-----------|----------|
+| Driver    | NOR      |
+| LapNumber | 17.0     |
+| LapTime   | 1:03.971 |
+| Stint     | 6.0      |
+| Compound  | SOFT     |
+
+- The Track Total timing is around 1:05
+- NOR made the fastest in Quali at Lap 17
+- He made it with 16 Stints! So, 5 pit stops
+

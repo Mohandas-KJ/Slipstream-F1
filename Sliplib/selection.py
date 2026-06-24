@@ -49,3 +49,21 @@ def analyse_fastest(fast_lap_data):
     })
 
     return df
+
+# Function to Get Lap and Stint Data
+def get_lap_stint(data):
+
+    drivers = data["Driver"].unique()
+
+    df = {"Driver": drivers,
+          "TotalLaps": [],
+          "TotalStint": []}
+
+    for i in drivers:
+        lap = int(data[data["Driver"] == i]["LapNumber"].max())
+        stint = int(data[data["Driver"] == i]["Stint"].max())
+
+        df["TotalLaps"].append(lap)
+        df["TotalStint"].append(stint)
+    
+    return pd.DataFrame(df)
