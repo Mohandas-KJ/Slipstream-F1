@@ -1,4 +1,13 @@
 import fastf1
+import pandas as pd
+
+def time_cnc(time):
+    t = pd.to_timedelta(time)
+
+    mins = int(t.total_seconds() // 60)
+    secs = t.total_seconds() % 60
+
+    return f"{mins}:{secs:06.3f}"
 
 def pick_athletes(data,drivers):
     dr = []
@@ -17,3 +26,26 @@ def pick_tyre_data(lap_data):
 # Function to give Crisp Result
 def clean_result(data):
     return data[["Abbreviation","TeamName","Position"]]
+
+# Function to give Crisp Fastest
+def analyse_fastest(fast_lap_data):
+
+    df = pd.DataFrame({
+        "Name": [
+            "Driver",
+            "LapNumber",
+            "LapTime",
+            "Stint",
+            "Compound"
+            
+        ],
+        "Value": [
+            fast_lap_data["Driver"],
+            fast_lap_data["LapNumber"],
+            time_cnc(fast_lap_data["LapTime"]),
+            fast_lap_data["Stint"],
+            fast_lap_data["Compound"]
+        ]
+    })
+
+    return df

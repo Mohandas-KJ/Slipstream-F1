@@ -3,6 +3,32 @@ This Report uses 2025 data to analyse the perfomance of 2026 GP
 
 ## Qualifying Analysis
 ### Results
+
+| DriverNumber | Abbreviation | TeamName        | Position |
+|--------------|--------------|-----------------|----------|
+| 4            | NOR          | McLaren         | 1.0      |
+| 16           | LEC          | Ferrari         | 2.0      |
+| 81           | PIA          | McLaren         | 3.0      |
+| 44           | HAM          | Ferrari         | 4.0      |
+| 63           | RUS          | Mercedes        | 5.0      |
+| 30           | LAW          | Racing Bulls    | 6.0      |
+| 1            | VER          | Red Bull Racing | 7.0      |
+| 5            | BOR          | Kick Sauber     | 8.0      |
+| 12           | ANT          | Mercedes        | 9.0      |
+| 10           | GAS          | Alpine          | 10.0     |
+| 14           | ALO          | Aston Martin    | 11.0     |
+| 23           | ALB          | Williams        | 12.0     |
+| 6            | HAD          | Racing Bulls    | 13.0     |
+| 43           | COL          | Alpine          | 14.0     |
+| 87           | BEA          | Haas F1 Team    | 15.0     |
+| 18           | STR          | Aston Martin    | 16.0     |
+| 31           | OCO          | Haas F1 Team    | 17.0     |
+| 22           | TSU          | Red Bull Racing | 18.0     |
+| 55           | SAI          | Williams        | 19.0     |
+| 27           | HUL          | Kick Sauber     | 20.0     |
+
+
 - Looking at the Results ["NOR","LEC","PIA","HAM","RUS"] gained Top
 - Kimi Antonelli Best Performer this year (2026) scored P9 in 2025
 - Verstappen Scored P7
+
