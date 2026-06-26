@@ -105,3 +105,33 @@ This Report uses 2025 data to analyse the perfomance of 2026 GP
 - Leclerc being P2 managed better than Norris
 - Piastri has a missing Hook compared to others
 
+## Race Analysis
+### Result Analysis
+
+**Austrian GP 2025 Results:**
+| Abbreviation | TeamName        | ClassifiedPosition |
+|--------------|-----------------|--------------------|
+| NOR          | McLaren         | 1                  |
+| PIA          | McLaren         | 2                  |
+| LEC          | Ferrari         | 3                  |
+| HAM          | Ferrari         | 4                  |
+| RUS          | Mercedes        | 5                  |
+| LAW          | Racing Bulls    | 6                  |
+| ALO          | Aston Martin    | 7                  |
+| BOR          | Kick Sauber     | 8                  |
+| HUL          | Kick Sauber     | 9                  |
+| OCO          | Haas F1 Team    | 10                 |
+| BEA          | Haas F1 Team    | 11                 |
+| HAD          | Racing Bulls    | 12                 |
+| GAS          | Alpine          | 13                 |
+| STR          | Aston Martin    | 14                 |
+| COL          | Alpine          | 15                 |
+| TSU          | Red Bull Racing | 16                 |
+| ALB          | Williams        | R                  |
+| VER          | Red Bull Racing | R                  |
+| ANT          | Mercedes        | R                  |
+| SAI          | Williams        | W                  |
+
+- Potential Drivers of this season have Retired during 2025!
+- Ferrari Potentially Performed well
+- Kimi and Max got a Retirement

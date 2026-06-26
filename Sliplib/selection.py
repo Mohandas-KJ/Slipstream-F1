@@ -24,8 +24,11 @@ def pick_tyre_data(lap_data):
     return lap_data[tyre_columns]
 
 # Function to give Crisp Result
-def clean_result(data):
+def clean_result_Quali(data):
     return data[["Abbreviation","TeamName","Position"]]
+
+def clean_result_race(data):
+    return data[["Abbreviation","TeamName","ClassifiedPosition"]]
 
 # Function to give Crisp Fastest
 def analyse_fastest(fast_lap_data):
