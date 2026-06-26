@@ -67,3 +67,18 @@ def get_lap_stint(data):
         df["TotalStint"].append(stint)
     
     return pd.DataFrame(df)
+
+# Function to get Fresh Tyre Period
+def get_fresh_tyre_period(data):
+
+    drivers = data["Driver"].unique()
+
+    df = {"Driver": [],
+          "TyrePeriod": []}
+    
+    for d in drivers:
+        period = int(data[data["Driver"] == d]["FreshTyre"].sum())
+        df["Driver"].append(d)
+        df["TyrePeriod"].append(period)
+    
+    return pd.DataFrame(df).sort_values(by="TyrePeriod",ascending=False)

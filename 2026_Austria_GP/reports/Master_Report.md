@@ -47,3 +47,61 @@ This Report uses 2025 data to analyse the perfomance of 2026 GP
 - NOR made the fastest in Quali at Lap 17
 - He made it with 16 Stints! So, 5 pit stops
 
+### Quali Lap and Stint 
+
+|    | Driver | TotalLaps | TotalStint |
+|----|--------|-----------|------------|
+| 0  | NOR    | 18        | 6          |
+| 1  | PIA    | 19        | 6          |
+| 2  | VER    | 18        | 6          |
+| 3  | LEC    | 21        | 7          |
+| 4  | HAM    | 21        | 7          |
+| 5  | RUS    | 18        | 6          |
+| 6  | ANT    | 17        | 6          |
+| 7  | STR    | 9         | 3          |
+| 8  | TSU    | 6         | 2          |
+| 9  | BOR    | 21        | 7          |
+| 10 | LAW    | 17        | 6          |
+| 11 | ALO    | 14        | 5          |
+| 12 | HUL    | 9         | 3          |
+| 13 | ALB    | 18        | 7          |
+| 14 | SAI    | 12        | 4          |
+| 15 | BEA    | 15        | 5          |
+| 16 | GAS    | 21        | 7          |
+| 17 | OCO    | 9         | 3          |
+| 18 | COL    | 15        | 5          |
+| 19 | HAD    | 12        | 4          |
+
+
+- Data Showing the Total Laps and Stint made by the Drivers
+- NOR made best with considerable amount of laps
+
+### Fresh Tyre Period
+
+| Driver | TyrePeriod |
+|--------|------------|
+| LAW    | 15         |
+| PIA    | 13         |
+| HAM    | 12         |
+| NOR    | 12         |
+| COL    | 12         |
+| RUS    | 12         |
+| LEC    | 9          |
+| VER    | 9          |
+| GAS    | 9          |
+| ALO    | 9          |
+| HAD    | 9          |
+| BOR    | 9          |
+| SAI    | 9          |
+| STR    | 9          |
+| BEA    | 9          |
+| ANT    | 8          |
+| TSU    | 6          |
+| OCO    | 6          |
+| HUL    | 6          |
+| ALB    | 5          |
+
+- Norris has Good Tyre Management being he scored fastest and P1
+- Leclerc being P2 managed better than Norris
+- Piastri has a missing Hook compared to others
+
