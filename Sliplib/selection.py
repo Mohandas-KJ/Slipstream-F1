@@ -85,3 +85,19 @@ def get_fresh_tyre_period(data):
         df["TyrePeriod"].append(period)
     
     return pd.DataFrame(df).sort_values(by="TyrePeriod",ascending=False)
+
+# Analyse Track History
+def analyse_track_History(data):
+
+    df = {"Flags": [],
+          "Occurence": []}
+
+    flags = data["Flag"].unique()
+
+    for f in flags:
+        df["Flags"].append(f)
+        df["Occurence"].append(len(data[data["Flag"] == f]))
+    
+    return pd.DataFrame(df)
+
+    
