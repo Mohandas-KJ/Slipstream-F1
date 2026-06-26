@@ -1,6 +1,7 @@
 #Imports
 import pandas as pd
 
+# Get Stint for Strategy Analysis
 def get_stint(data):
     stint = {}
 
@@ -18,6 +19,7 @@ def get_stint(data):
 
     return df.sort_values(by="Pit Stops",ascending=True).reset_index(drop=True)
 
+# Calculate Position Gain
 def calc_position_gain(data):
 
     pos = {}
@@ -40,3 +42,46 @@ def calc_position_gain(data):
     df = pd.DataFrame(pos.items(),columns=["Driver","Position Gain"])
 
     return df.sort_values(by="Position Gain",ascending=False).reset_index(drop=True) 
+
+import pandas as pd
+import numpy as np
+
+def calc_pos_gain(data):
+
+    result = {
+        "Driver": [],
+        "PositionGain": [],
+        "Status": []
+    }
+
+    drivers = data["Abbreviation"].unique()
+
+    for d in drivers:
+
+        row = data[data["Abbreviation"] == d].iloc[0]
+
+        grid_pos = row["GridPosition"]
+        classi_pos = row["ClassifiedPosition"]
+
+        try:
+            gain = int(grid_pos) - int(classi_pos)
+
+            result["Driver"].append(d)
+            result["PositionGain"].append(gain)
+            result["Status"].append("Finished")
+
+        except (ValueError, TypeError):
+
+            result["Driver"].append(d)
+            result["PositionGain"].append(np.nan)
+            result["Status"].append(str(classi_pos))
+
+    return (
+        pd.DataFrame(result)
+        .sort_values(
+            by="PositionGain",
+            ascending=False,
+            na_position="last"
+        )
+        .reset_index(drop=True)
+    )
