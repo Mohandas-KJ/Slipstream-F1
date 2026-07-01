@@ -16,6 +16,15 @@ def pick_athletes(data,drivers):
         dr.append(td)
     return tuple(dr)
 
+def pick_fastest_group(drivers_data):
+
+    fast_datas = []
+
+    for d in drivers_data:
+        fast_datas.append(d.pick_fastest())
+    
+    return tuple(fast_datas)
+
 # Function to pick Tyre Data
 def pick_tyre_data(lap_data):
 
@@ -100,4 +109,22 @@ def analyse_track_History(data):
     
     return pd.DataFrame(df)
 
+
+# =====================================================================
+#                      TELEMETRY ANALYSIS
+# =====================================================================
+
+def tel_fast_lap_summary(drivers_fast):
+
+    df = {"Driver": [],
+          "LapTime": [],
+          "Compound": [],
+          "TyreLife": []}
     
+    for d in drivers_fast:
+        df["Driver"].append(d["Driver"])
+        df["LapTime"].append(time_cnc(d["LapTime"]))
+        df["Compound"].append(d["Compound"])
+        df["TyreLife"].append(d["TyreLife"])
+
+    return df    
