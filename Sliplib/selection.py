@@ -127,4 +127,13 @@ def tel_fast_lap_summary(drivers_fast):
         df["Compound"].append(d["Compound"])
         df["TyreLife"].append(d["TyreLife"])
 
-    return df    
+    return pd.DataFrame(df)   
+
+def tel_get_for_all(drivers_fast):
+
+    tel_datas = []
+
+    for d in drivers_fast:
+        tel_datas.append(d.get_car_data().add_distance())
+    
+    return tuple(tel_datas)
