@@ -1,0 +1,1 @@
+CONTENDERS = ['HAM', 'ANT', 'VER', 'LEC']
