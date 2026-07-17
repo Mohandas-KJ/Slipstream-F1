@@ -232,5 +232,9 @@ def find_top_battles(
         appearances[d2] = appearances.get(d2, 0) + 1
         if len(selected) == n:
             break
+    
+    final_df = pd.DataFrame(selected).reset_index(drop=True)
 
-    return pd.DataFrame(selected).reset_index(drop=True)
+    contenders = pd.concat([final_df["Driver1"],final_df["Driver2"]]).unique().to_list()
+
+    return final_df,contenders
