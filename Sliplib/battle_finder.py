@@ -237,4 +237,12 @@ def find_top_battles(
 
     contenders = list(pd.concat([final_df["Driver1"],final_df["Driver2"]]).unique())
 
-    return final_df,contenders
+    rivals = []
+
+    for i in range(n):
+        rivals.append(tuple([final_df["Driver1"].iloc[i],final_df["Driver2"].iloc[i]]))
+
+    # Export CSV file
+    final_df.to_csv("../data/Live_Battle.csv",index=False)
+
+    return contenders,rivals
