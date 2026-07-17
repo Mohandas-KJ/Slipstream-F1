@@ -235,6 +235,6 @@ def find_top_battles(
     
     final_df = pd.DataFrame(selected).reset_index(drop=True)
 
-    contenders = pd.concat([final_df["Driver1"],final_df["Driver2"]]).unique().to_list()
+    contenders = list(pd.concat([final_df["Driver1"],final_df["Driver2"]]).unique())
 
     return final_df,contenders
