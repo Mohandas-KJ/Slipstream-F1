@@ -16,6 +16,15 @@ def pick_athletes(data,drivers):
         dr.append(td)
     return tuple(dr)
 
+def select_drivers(data,drivers):
+    f_dr = {}
+
+    for d in drivers:
+        f_dr[d] = data.pick_drivers(d)
+
+    print(f_dr.keys())
+    return f_dr
+
 def pick_fastest_group(drivers_data):
 
     fast_datas = []
