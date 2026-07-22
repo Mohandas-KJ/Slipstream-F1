@@ -1,0 +1,7 @@
+Driver1,Driver2,battle_closeness,overtakes,position_gain_divergence,strategy_divergence,is_teammate,blended_score,reason
+HAD,BEA,0.6666666666666666,3,9,0,0,0.6384615384615384,"sustained close gap, 3 position swaps, very different race trajectories"
+HUL,SAI,0.2318840579710145,5,6,1,0,0.564046822742475,"5 position swaps, diverging strategy, very different race trajectories"
+ALB,OCO,0.4927536231884058,3,2,1,0,0.5394648829431438,"sustained close gap, 3 position swaps, diverging strategy"
+COL,GAS,0.2318840579710145,3,3,1,1,0.5178929765886288,"3 position swaps, teammates, diverging strategy"
+NOR,PIA,0.12857142857142856,3,4,1,1,0.4790384615384615,"3 position swaps, teammates, diverging strategy"
+LAW,VER,0.32857142857142857,4,0,1,0,0.47250000000000003,"sustained close gap, 4 position swaps, diverging strategy"
