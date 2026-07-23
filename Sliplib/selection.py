@@ -37,7 +37,10 @@ def pick_tyre_data(lap_data):
 
     tyre_columns = ["Driver","LapNumber","Compound","TyreLife","FreshTyre","Stint"]
 
-    return lap_data[tyre_columns]
+    return {
+        driver: df[tyre_columns]
+        for driver,df in lap_data.items()
+    }
 
 # Function to give Crisp Result
 def clean_result_Quali(data):

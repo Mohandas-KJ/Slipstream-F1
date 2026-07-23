@@ -87,3 +87,38 @@ def plot_dist_rpms(drivers,names):
     plt.title(f"Distance vs RPM of {len(drivers)} Drivers")
     plt.legend()
     plt.show()
+
+# Plot Tyre Degradation
+def plot_tyre_degradation(drivers_data, pair):
+    """
+    Plot tyre degradation for two drivers.
+
+    Parameters
+    ----------
+    drivers_data : dict
+        Dictionary returned by select_drivers()
+
+    pair : tuple
+        Example:
+            ("HUL", "OCO")
+    """
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+
+    for driver in pair:
+
+        clean = drivers_data[driver].pick_quicklaps()
+
+        ax.scatter(
+            clean["TyreLife"],
+            clean["LapTime"].dt.total_seconds(),
+            label=driver
+        )
+
+    ax.set_xlabel("Tyre Life")
+    ax.set_ylabel("Lap Time (s)")
+    ax.set_title(f"Tyre Degradation: {pair[0]} vs {pair[1]}")
+    ax.legend()
+
+    plt.tight_layout()
+    plt.show()
