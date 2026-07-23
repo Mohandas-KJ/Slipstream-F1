@@ -27,12 +27,10 @@ def select_drivers(data,drivers):
 
 def pick_fastest_group(drivers_data):
 
-    fast_datas = []
-
-    for d in drivers_data:
-        fast_datas.append(d.pick_fastest())
-    
-    return tuple(fast_datas)
+    return {
+        code: df.pick_fastest()
+        for code,df in drivers_data.items()
+    }
 
 # Function to pick Tyre Data
 def pick_tyre_data(lap_data):
@@ -140,9 +138,7 @@ def tel_fast_lap_summary(drivers_fast):
 
 def tel_get_for_all(drivers_fast):
 
-    tel_datas = []
-
-    for d in drivers_fast:
-        tel_datas.append(d.get_car_data().add_distance())
-    
-    return tuple(tel_datas)
+    return {
+        code: df.get_car_data().add_distance()
+        for code,df in drivers_fast.items()
+    }
