@@ -1,2 +1,2 @@
-CONTENDERS = ['STR', 'LAW', 'PIA', 'HAM', 'BEA', 'ALO', 'HAD', 'NOR', 'SAI', 'TSU', 'COL']
-RIVALS = [('STR', 'ALO'), ('LAW', 'HAD'), ('PIA', 'NOR'), ('HAM', 'SAI'), ('BEA', 'TSU'), ('HAM', 'COL')]
+CONTENDERS = ['HAD', 'HUL', 'ALB', 'COL', 'NOR', 'LAW', 'BEA', 'SAI', 'OCO', 'GAS', 'PIA', 'VER']
+RIVALS = [('HAD', 'BEA'), ('HUL', 'SAI'), ('ALB', 'OCO'), ('COL', 'GAS'), ('NOR', 'PIA'), ('LAW', 'VER')]
