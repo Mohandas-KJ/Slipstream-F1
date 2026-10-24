@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+YEAR=2026
+Round=$1
+NAME=$2
+
+DIR_NAME="$YEAR"_"$Round"_"$NAME"
+
+# 1. Create folders
+mkdir -p $DIR_NAME/{data,notebooks,plots,reports}
+
+# 2. Copy the templates
+cp templates/*.ipynb $DIR_NAME/notebooks/
+cp templates/report_template.md $DIR_NAME/reports/Master_Report.md
