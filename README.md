@@ -67,34 +67,41 @@ Each race weekend follows a structured, repeatable workflow:
 
 ## `$ ls -la`
 
-Each Grand Prix has its own dedicated workspace:
+Each Grand Prix has its own dedicated workspace with data, notebooks, plots, and reports:
 
 ```
 slipstream-f1/
-├── 2026_Bahrain_GP/
-│   ├── historical_analysis.ipynb
-│   ├── session_analysis.ipynb
-│   ├── telemetry_analysis.ipynb
-│   ├── strategy_analysis.ipynb
-│   ├── visualizations/
-│   └── report.md
-├── 2026_Saudi_Arabian_GP/
-│   └── ...
-├── 2026_Australian_GP/
-│   └── ...
-├── 2026_Barcelona_GP/
-│   └── ...
+├── Sliplib/                          # Reusable analytics, algorithms & visualization library
+│   ├── slipload.py                   # Session loader & robust cache management
+│   ├── selection.py                  # Lap, driver & telemetry extraction
+│   ├── battle_finder.py              # Automated weighted battle detection algorithm
+│   ├── Gotyres.py                    # Tyre stint analysis
+│   ├── GridSum.py                    # Grid position gain & stint summaries
+│   ├── plotting.py                   # Matplotlib chart helpers (auto-save enabled)
+│   └── dashboard.py                  # F1 dark-theme telemetry dashboard
+├── templates/                        # Master templates for new race weekends
+│   ├── 01_results_and_laps.ipynb
+│   ├── 02_telemetry_analysis.ipynb
+│   ├── 03_tyre_and_stint_analysis.ipynb
+│   ├── report_template.md
+│   └── README.md
+├── 2026_R8_Austria_GP/               # Example Race Weekend Workspace
+│   ├── data/                         # Exported CSVs & local battles.json
+│   ├── notebooks/                    # Sequential analysis notebooks
+│   ├── plots/                        # Generated PNG charts
+│   └── reports/                      # Master_Report.md
 └── README.md
 ```
 
 ### 📂 Race weekends
 
-> Update these links as each Grand Prix workspace is added to the repo.
-
-| Grand Prix | Status | Link |
+| Grand Prix | Status | Workspace |
 |---|---|---|
-| 🇪🇸 Spanish GP (Barcelona) | 🚧 In progress | [`2026_Barcelona_GP/`](./2026_Barcelona_GP) |
-| 🏁 More races | ⏳ Coming soon | — |
+| 🇪🇸 Spanish GP (Barcelona) | ✅ Analyzed | [`2026_R8_Barcelona_GP/`](./2026_R8_Barcelona_GP) |
+| 🇦🇹 Austrian GP (Spielberg) | ✅ Master Report | [`2026_R8_Austria_GP/`](./2026_R8_Austria_GP) |
+| 🇬🇧 British GP (Silverstone) | 🚧 In progress | [`2026_R9_British_GP/`](./2026_R9_British_GP) |
+| 🇧🇪 Belgian GP (Spa) | 🚧 In progress | [`2026_R10_Belgian_GP/`](./2026_R10_Belgian_GP) |
+| 🇭🇺 Hungarian GP (Hungaroring) | ✅ Analyzed | [`2026_R11_Hungary_GP/`](./2026_R11_Hungary_GP) |
 
 ---
 

@@ -16,7 +16,7 @@ C_THROTTLE = "#00e676"   # green – Throttle (on throttle)
 C_BRAKE    = "#e10600"   # red   – Brake (on brake)
 C_COAST    = "#ff9800"   # amber – coasting (throttle off, brake off)
 
-def create_dashboard(data,name):
+def create_dashboard(data, name, save_path=None, show=True):
 
     # ── Load data ──────────────────────────────────────────────────────────────────
     df = data
@@ -158,7 +158,17 @@ def create_dashboard(data,name):
     ax3.tick_params(axis="x", colors=TEXT, labelsize=9)
     fig.text(0.5, 0.01, "← LAP PROGRESS →", ha="center", color="#555555", fontsize=8)
 
-    plt.show()
+    if save_path:
+        from pathlib import Path
+        p = Path(save_path)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        fig.savefig(str(p), facecolor=fig.get_facecolor(), bbox_inches="tight", dpi=150)
+        print(f"Dashboard saved to: {save_path}")
+
+    if show:
+        plt.show()
+    else:
+        plt.close(fig)
 
 def style_ax(ax):
     ax.set_facecolor(PANEL_BG)
